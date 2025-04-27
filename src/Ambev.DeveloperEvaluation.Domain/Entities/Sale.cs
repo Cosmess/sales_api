@@ -1,4 +1,5 @@
 ﻿using Ambev.DeveloperEvaluation.Domain.Common;
+using Ambev.DeveloperEvaluation.Domain.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -52,7 +53,7 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities
             Status = SaleStatus.Cancelled;
         }
 
-        private void RecalculateTotal()
+        public void RecalculateTotal()
         {
             TotalAmount = 0;
             foreach (var item in Items)
